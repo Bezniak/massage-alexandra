@@ -7,6 +7,11 @@
     box-sizing: border-box;
 }
 
+:root {
+    --soft-white: #f9f9f7;
+    --light-blue: #e9f1fb;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -30,7 +35,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 
 a {

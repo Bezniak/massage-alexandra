@@ -69,54 +69,6 @@ const Footer = () => {
                                     {t("business_card_website")}
                                 </NavLink>
                             </li>
-                            <li className="mb-4">
-                                <NavLink to={'sites' + ROUTES.LANDING} className="hover:underline"
-                                         onClick={handleClick}>
-                                    {t("landing")}
-                                </NavLink>
-                            </li>
-                            <li className="mb-4">
-                                <NavLink to={'sites' + ROUTES.CORPORATE_WEBSITE} className="hover:underline"
-                                         onClick={handleClick}>
-                                    {t("corporate_website")}
-                                </NavLink>
-                            </li>
-                            <li className="mb-4">
-                                <NavLink to={'sites' + ROUTES.CATALOG_SITE} className="hover:underline"
-                                         onClick={handleClick}>
-                                    {t("catalog_site")}
-                                </NavLink>
-                            </li>
-                            <li className="mb-4">
-                                <NavLink to={'sites' + ROUTES.ONLINE_STORE} className="hover:underline"
-                                         onClick={handleClick}>
-                                    {t("online_store")}
-                                </NavLink>
-                            </li>
-                            <li className="mb-4">
-                                <NavLink to={'sites' + ROUTES.ONLINE_SCHOOL_WEBSITES} className="hover:underline"
-                                         onClick={handleClick}>
-                                    {t("online_school_websites")}
-                                </NavLink>
-                            </li>
-                            <li className="mb-4">
-                                <NavLink to={'sites' + ROUTES.QUIZ_SITE} className="hover:underline"
-                                         onClick={handleClick}>
-                                    {t("quiz_site")}
-                                </NavLink>
-                            </li>
-                            <li className="mb-4">
-                                <NavLink to={'sites' + ROUTES.WEDDING_INVITATION_WEBSITE} className="hover:underline"
-                                         onClick={handleClick}>
-                                    {t("wedding_invitation_website")}
-                                </NavLink>
-                            </li>
-                            <li className="mb-4">
-                                <NavLink to={'sites' + ROUTES.WEBSITE_FOR_GOVERNMENT_ORGANIZATIONS}
-                                         className="hover:underline" onClick={handleClick}>
-                                    {t("websites_for_government_organizations")}
-                                </NavLink>
-                            </li>
                         </ul>
                     </div>
                     <div>
@@ -128,17 +80,6 @@ const Footer = () => {
                                 <NavLink to={'service' + ROUTES.WEBSITE_SUPPORT} className="hover:underline"
                                          onClick={handleClick}>
                                     {t("website_support")}
-                                </NavLink>
-                            </li>
-                            <li className="mb-4">
-                                <NavLink to={'service' + ROUTES.SMM} className="hover:underline" onClick={handleClick}>
-                                    {t("SMM_service")}
-                                </NavLink>
-                            </li>
-                            <li className="mb-4">
-                                <NavLink to={'service' + ROUTES.LOCALIZATION_SUPPORT} className="hover:underline"
-                                         onClick={handleClick}>
-                                    {t("localization_and_translation")}
                                 </NavLink>
                             </li>
                         </ul>
