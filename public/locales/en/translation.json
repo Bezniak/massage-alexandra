@@ -16,5 +16,31 @@
   "photoCollectionDesc_3": "The procedure alleviates fatigue and restores inner balance.",
   "photoCollectionDesc_4": "Gentle techniques help forget daily worries and fully relax.",
   "newSolutionTitle": "Relax and Rejuvenate with Our Expert Massage Services",
-  "newSolutionDesc": "Our massage services are designed for deep relaxation of the body, stress relief, and the restoration of mental harmony. Whether you're seeking an intense deep tissue massage or a soothing aromatherapy session, we offer tailored treatments that meet your unique needs and promote overall well-being and inner balance."
+  "newSolutionDesc": "Our massage services are designed for deep relaxation of the body, stress relief, and the restoration of mental harmony. Whether you're seeking an intense deep tissue massage or a soothing aromatherapy session, we offer tailored treatments that meet your unique needs and promote overall well-being and inner balance.",
+  "enjoyTitle": "Enjoy a Massage",
+  "name": "Name",
+  "required": "This field is required",
+  "enterPhoneNumber": "Phone",
+  "enterValidPhone": "Please enter a valid phone number",
+  "selectDate": "Select a date",
+  "selectTime": "Select a time",
+  "selectMassageType": "Select a massage type",
+  "bookButton": "Book",
+  "benefitsTitle": "Massage is the best thing you can do for your body",
+  "benefitsTitle_1": "Deep Relaxation",
+  "benefitsDesc_1": "Relieve muscle tension, forget about back pain, and feel lightness in your body.",
+  "benefitsTitle_2": "Improved Circulation",
+  "benefitsDesc_2": "Feel how massage activates circulation, filling your body with energy and restoring strength.",
+  "benefitsTitle_3": "Stress Reduction",
+  "benefitsDesc_3": "Free your mind from tension and stress, giving yourself moments of peace and harmony.",
+  "benefitsTitle_4": "Fatigue Relief",
+  "benefitsDesc_4": "Leave fatigue behind and feel lightness in your body after a relaxing massage.",
+  "thankYouMessageBooking": {
+    "thanks": "Thank you for booking!",
+    "youBookOn": "Your appointment is scheduled for",
+    "onDate": "on",
+    "on": "for a",
+    "address": "Address: Grodno, Gorky Street, 65."
+  }
+
 }

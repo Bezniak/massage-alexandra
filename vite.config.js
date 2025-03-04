@@ -8,4 +8,11 @@ export default defineConfig({
         react(),
         tailwindcss(),
     ],
+    theme: {
+        extend: {
+            letterSpacing: {
+                custom: '0.2em', // Custom spacing
+            },
+        },
+    },
 })
