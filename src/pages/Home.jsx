@@ -4,6 +4,9 @@ import PhotoCollage from "../components/PhotoCollage/PhotoCollage.jsx";
 import NewSolution from "../components/NewSolution/NewSolution.jsx";
 import EnjoyDifference from "../components/EnjoyDifference/EnjoyDifference.jsx";
 import Benefits from "../components/Benefits/Benefits.jsx";
+import IconsContacts from "../components/IconsContacts/IconsContacts.jsx";
+import Map from "../Map/Map.jsx";
+import Follow from "../components/Follow/Follow.jsx";
 
 const Home = () => {
     return (
@@ -13,6 +16,9 @@ const Home = () => {
             <EnjoyDifference/>
             <NewSolution/>
             <Benefits/>
+            <IconsContacts/>
+            <Map/>
+            <Follow/>
         </div>
     );
 };

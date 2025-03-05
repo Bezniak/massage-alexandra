@@ -7,4 +7,7 @@ export const ROUTES = {
     SERVICES: "/services",
     PRICES: "/price",
     PRIVACY_POLICY: "/privacy-policy",
+
+
+    BOOK: "/book",
 }
