@@ -104,7 +104,7 @@ const Navbar = () => {
                         </li>
 
                         <li>
-                            <NavLink to={ROUTES.SERVICES}
+                            <NavLink to={ROUTES.MASSAGES}
                                      onClick={() => setIsMobileMenuOpen(false)}
                                      className="block py-2 px-3 rounded md:border-0 md:p-0 text-white transition"
                             >

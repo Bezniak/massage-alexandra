@@ -5,7 +5,10 @@
   "FAQ": "FAQ",
   "contacts": "Contacts",
   "bookNow": "Book now!",
+  "totalPrice": "Total",
   "seeMore": "SEE MORE",
+  "more": "More",
+  "minutes": "minutes",
   "sliderTitle": "Massage – harmony of soul and body in every touch",
   "photoCollectionTitle_1": "Massage – A Source of Energy",
   "photoCollectionTitle_2": "Massage – Caring for Health",
@@ -35,15 +38,20 @@
   "benefitsDesc_3": "Free your mind from tension and stress, giving yourself moments of peace and harmony.",
   "benefitsTitle_4": "Fatigue Relief",
   "benefitsDesc_4": "Leave fatigue behind and feel lightness in your body after a relaxing massage.",
+  "servicesTitle": "Variety of massage types: find your path to well-being and relaxation",
+  "massageAdvantages": "Benefits of massage",
   "thankYouMessageBooking": {
     "thanks": "Thank you for booking!",
     "youBookOn": "Your appointment is scheduled for",
     "onDate": "on",
     "on": "for a",
-    "address": "Address: Grodno, Gorky Street, 65."
+    "address": "Address: Grodno, Gorky Street, 65.",
+    "sum": "Amount to be paid"
   },
   "joinUsInstagram": "JOIN US INSTAGRAM",
   "bookAppointment": "book your Appointment",
   "callUs": "CALL US +375 (44) 585-98-44",
-  "followUs": "Follow us on Instagram"
+  "followUs": "Follow us on Instagram",
+  "address": "Grodno, Gorky st., 65",
+  "massageType": "Massage types"
 }

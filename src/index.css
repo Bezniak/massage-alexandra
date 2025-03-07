@@ -43,6 +43,10 @@ a {
     cursor: pointer;
 }
 
+li {
+    list-style: none;
+}
+
 .overlay {
     position: absolute;
     top: 0;
@@ -51,4 +55,15 @@ a {
     height: 100%;
     background: rgba(0, 0, 0, 0.3); /* Черный цвет с прозрачностью 50% */
     z-index: 1;
+}
+
+.select__control {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.select__control:focus,
+.select__control--is-focused {
+    border: none !important;
+    box-shadow: none !important;
 }

@@ -13,68 +13,60 @@ const Footer = () => {
 
 
     return (
-        <footer className="bg-black">
+        <footer className="bg-gray-800">
             <div className="mx-auto w-full max-w-screen-xl">
-                <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-3">
+                <div className="grid grid-cols-1 gap-12 px-4 py-6 lg:py-8 md:grid-cols-3">
+
+                    <div className='flex flex-col gap-5'>
+                        <NavLink to={ROUTES.HOME} onClick={handleClick}>
+                            <img src="/logoWhite.svg"
+                                 alt="logo"
+                                 className='size-24'
+                            />
+                        </NavLink>
+                        <ul className="text-gray-500 dark:text-gray-400 font-medium">
+
+                            <li className='mb-4'>
+                                {t("address")}
+                            </li>
+                            <li className='mb-4'>
+                                {t("enterPhoneNumber")}: &nbsp;
+                                <a href={`tel:+375445859844`}
+                                   className='hover:underline transition'
+                                   target="_blank"
+                                >
+                                    +375 (44) 585-98-44
+                                </a>
+                            </li>
+                            <li className='mb-4'>
+                                Email: &nbsp;
+                                <a
+                                    href={`mailto:some@gmail.com`}
+                                    className='hover:underline transition'
+                                >
+                                    some@gmail.com
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+
                     <div>
-                        <h2 className="mb-6 text-sm font-semibold uppercase text-white">
-                            {t("company")}
-                        </h2>
+                        <h3 className="mb-6 text-sm font-semibold uppercase text-white">
+                            {t("massageType")}
+                        </h3>
                         <ul className="text-gray-500 dark:text-gray-400 font-medium">
                             <li className="mb-4" onClick={handleClick}>
                                 <NavLink to={ROUTES.ABOUT_US} className=" hover:underline">
                                     {t("about_us")}
                                 </NavLink>
                             </li>
-                            <li className="mb-4" onClick={handleClick}>
-                                <NavLink to={ROUTES.CAREERS} className="hover:underline">
-                                    {t("careers")}
-                                </NavLink>
-                            </li>
-                            <li className="mb-4" onClick={handleClick}>
-                                <NavLink to={ROUTES.PORTFOLIO} className="hover:underline">
-                                    {t("portfolio")}
-                                </NavLink>
-                            </li>
-                            <li className="mb-4" onClick={handleClick}>
-                                <NavLink to={ROUTES.FAQ} className="hover:underline">
-                                    {t("Faq")}
-                                </NavLink>
-                            </li>
-                            <li className="mb-4" onClick={handleClick}>
-                                <NavLink to={ROUTES.PRIVACY_POLICY} className="hover:underline">
-                                    {t("privacy_policy")}
-                                </NavLink>
-                            </li>
-                            <li className="mb-4" onClick={handleClick}>
-                                <NavLink to={ROUTES.PRICES} className="hover:underline">
-                                    {t("prices")}
-                                </NavLink>
-                            </li>
-                            <li className="mb-4" onClick={handleClick}>
-                                <NavLink to={ROUTES.CONTACTS} className="hover:underline">
-                                    {t("contacts")}
-                                </NavLink>
-                            </li>
                         </ul>
                     </div>
                     <div>
-                        <h2 className="mb-6 text-sm font-semibold uppercase text-white">
-                            {t("website_development")}
-                        </h2>
-                        <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                            <li className="mb-4">
-                                <NavLink to={'sites' + ROUTES.BUSINESS_CARD_WEBSITE} className="hover:underline"
-                                         onClick={handleClick}>
-                                    {t("business_card_website")}
-                                </NavLink>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2 className="mb-6 text-sm font-semibold uppercase text-white">
-                            {t("services")}
-                        </h2>
+                        <h3 className="mb-6 text-sm font-semibold uppercase text-white">
+                            {t("aboutUs")}
+                        </h3>
                         <ul className="text-gray-500 dark:text-gray-400 font-medium">
                             <li className="mb-4">
                                 <NavLink to={'service' + ROUTES.WEBSITE_SUPPORT} className="hover:underline"

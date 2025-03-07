@@ -4,9 +4,15 @@ export const ROUTES = {
     ABOUT_US: "/about-us",
     CONTACTS: "/contacts",
     FAQ: "/faq",
-    SERVICES: "/services",
     PRICES: "/price",
     PRIVACY_POLICY: "/privacy-policy",
+
+
+    MASSAGES: "/massages",
+    MASSAGE: "/massage/:id",
+
+    FOOT_MASSAGE: "footMassage",
+    HAND_MASSAGE: "handMassage",
 
 
     BOOK: "/book",
