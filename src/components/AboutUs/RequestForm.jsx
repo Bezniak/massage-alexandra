@@ -6,7 +6,7 @@ const TELEGRAM_BOT_TOKEN = import.meta.env.VITE_TELEGRAM_BOT_TOKEN;
 const TELEGRAM_CHAT_ID = import.meta.env.VITE_TELEGRAM_CHAT_ID;
 const TELEGRAM_API_URL = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
 
-const ContactForm = () => {
+const RequestForm = () => {
     const {t} = useTranslation();
 
     const {
@@ -125,4 +125,4 @@ const ContactForm = () => {
     );
 };
 
-export default ContactForm;
+export default RequestForm;

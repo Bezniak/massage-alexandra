@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {useTranslation} from "react-i18next";
-import ContactForm from "./ContactForm.jsx";
+import RequestForm from "./RequestForm.jsx";
 
 const AboutUs = () => {
     const {t} = useTranslation();
@@ -87,13 +87,13 @@ const AboutUs = () => {
                       <div className='text-center'>
                           <button
                               onClick={() => setShowForm(!showForm)}
-                              className='tracking-widest w-1/3 py-3 px-3 bg-[var(--dark-buttom)] text-white uppercase hover:bg-red-500 transition'
+                              className='tracking-widest w-fit py-4 px-6 bg-[var(--dark-buttom)] text-white uppercase hover:bg-red-500 transition'
                           >
                               {t("leaveRequest")}
                           </button>
                       </div>
                   )}
-                  {showForm && (<ContactForm />)}
+                  {showForm && (<RequestForm />)}
               </div>
           </div>
         </div>

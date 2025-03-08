@@ -101,7 +101,7 @@ const Footer = () => {
                             <li className="mb-4">
                                 <NavLink to={ROUTES.PRIVACY_POLICY} className="hover:underline"
                                          onClick={handleClick}>
-                                    {t("privacyPolicy")}
+                                    {t("pp")}
                                 </NavLink>
                             </li>
                         </ul>
