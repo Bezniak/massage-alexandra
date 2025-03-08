@@ -1,15 +1,13 @@
 export const ROUTES = {
     HOME: "/",
-    NOT_FOUND: "/notfound",
-    ABOUT_US: "/about-us",
+    NOT_FOUND: "/notFound",
+    ABOUT_US: "/aboutUs",
     CONTACTS: "/contacts",
     FAQ: "/faq",
-    PRIVACY_POLICY: "/privacy-policy",
-
-
+    PRIVACY_POLICY: "/privacyPolicy",
+    MEMBERSHIP: "/membership",
     MASSAGES: "/massages",
     MASSAGE: "/massage/:id",
-
     FOOT_MASSAGE: "footMassage",
     HAND_MASSAGE: "handMassage",
     HONEY_MASSAGE: "honeyMassage",
@@ -20,8 +18,4 @@ export const ROUTES = {
     RELAX_MASSAGE: "relaxMassage",
     NECK_SHOULDER_MASSAGE: "neckShoulderMassage",
     SPORT_MASSAGE: "sportMassage",
-
-
-
-    BOOK: "/book",
 }

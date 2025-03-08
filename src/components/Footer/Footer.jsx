@@ -3,7 +3,7 @@ import {useTranslation} from "react-i18next";
 import {NavLink} from "react-router-dom";
 import {ROUTES} from "../../config/routes.js";
 import {FaInstagramSquare, FaTiktok, FaViber} from "react-icons/fa";
-import {FaT, FaTelegram} from "react-icons/fa6";
+import {FaTelegram} from "react-icons/fa6";
 import {MdOutlineMailOutline} from "react-icons/md";
 import {handleClick} from "../../common/helpers.js";
 import {createStore} from "../../store/store.js";
@@ -60,7 +60,8 @@ const Footer = () => {
                         <ul className="text-gray-500 dark:text-gray-400 font-medium">
                             {store.massageTypes.map((massage) => (
                                 <li key={massage.id} className="mb-4" onClick={handleClick}>
-                                    <NavLink to={`/massage/${massage.url}`} onClick={handleClick} className="hover:underline">
+                                    <NavLink to={`/massage/${massage.url}`} onClick={handleClick}
+                                             className="hover:underline">
                                         {massage.name}
                                     </NavLink>
                                 </li>
@@ -72,11 +73,35 @@ const Footer = () => {
                         <h3 className="mb-6 text-sm font-semibold uppercase text-white">
                             {t("aboutUs")}
                         </h3>
-                        <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                        <ul className="flex flex-col text-gray-500 font-medium">
                             <li className="mb-4">
-                                <NavLink to={'service' + ROUTES.WEBSITE_SUPPORT} className="hover:underline"
+                                <NavLink to={ROUTES.ABOUT_US} className="hover:underline"
                                          onClick={handleClick}>
-                                    {t("website_support")}
+                                    {t("aboutUs")}
+                                </NavLink>
+                            </li>
+                            <li className="mb-4">
+                                <NavLink to={ROUTES.FAQ} className="hover:underline"
+                                         onClick={handleClick}>
+                                    {t("FAQ")}
+                                </NavLink>
+                            </li>
+                            <li className="mb-4">
+                                <NavLink to={ROUTES.MEMBERSHIP} className="hover:underline"
+                                         onClick={handleClick}>
+                                    {t("membership")}
+                                </NavLink>
+                            </li>
+                            <li className="mb-4">
+                                <NavLink to={ROUTES.CONTACTS} className="hover:underline"
+                                         onClick={handleClick}>
+                                    {t("contacts")}
+                                </NavLink>
+                            </li>
+                            <li className="mb-4">
+                                <NavLink to={ROUTES.PRIVACY_POLICY} className="hover:underline"
+                                         onClick={handleClick}>
+                                    {t("privacyPolicy")}
                                 </NavLink>
                             </li>
                         </ul>
@@ -84,8 +109,8 @@ const Footer = () => {
                 </div>
 
                 <div className="px-4 py-6 bg-gray-900 md:flex md:items-center md:justify-between">
-                    <span className="text-base text-gray-500 dark:text-gray-300 sm:text-center">
-                        © {year} <NavLink to={ROUTES.HOME} onClick={handleClick}>IV-SOFT™</NavLink>.
+                    <span className="text-base text-white sm:text-center">
+                        © {year} <NavLink to={ROUTES.HOME} onClick={handleClick}>Massage Grodno™</NavLink>.
                         &nbsp;
                         <a href="https://contragent.by/unp/590210932"
                            target="_blank"
