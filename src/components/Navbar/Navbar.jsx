@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {NavLink} from "react-router-dom";
 import {ROUTES} from "../../config/routes.js";
 import {useTranslation} from "react-i18next";
@@ -7,6 +7,7 @@ import useLanguage from "../../hooks/useLanguage.js";
 
 // Import flag images
 import LanguageSelector from "./LanguageSelector.jsx";
+import ModalWindow from "../ModalWindow/ModalWindow.jsx";
 
 
 const Navbar = () => {
@@ -16,6 +17,8 @@ const Navbar = () => {
     const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
     const {currentLanguage, changeLanguage} = useLanguage();
     const {t} = useTranslation();
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
 
 
     // Закрытие меню при клике вне меню или прокрутке
@@ -63,6 +66,7 @@ const Navbar = () => {
 
 
     return (
+    <>
         <nav className="absolute z-50 top-0 left-1/2 transform -translate-x-1/2 bg-transparent border-gray-200 w-full">
             <div className="w-full flex flex-wrap items-center justify-between p-4">
 
@@ -137,7 +141,9 @@ const Navbar = () => {
                         />
                     </div>
                 </NavLink>
-                <button className='text-white'>
+                <button className='text-white'
+                        onClick={() => setIsModalOpen(true)}
+                >
                     {t("bookNow")}
                 </button>
                 <div className='gap-10 xs:hidden md:flex'>
@@ -150,6 +156,9 @@ const Navbar = () => {
                 </div>
             </div>
         </nav>
+        {isModalOpen && <ModalWindow isOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />}
+
+    </>
 
     );
 };

@@ -6,10 +6,12 @@ import {FaInstagramSquare, FaTiktok, FaViber} from "react-icons/fa";
 import {FaT, FaTelegram} from "react-icons/fa6";
 import {MdOutlineMailOutline} from "react-icons/md";
 import {handleClick} from "../../common/helpers.js";
+import {createStore} from "../../store/store.js";
 
 const Footer = () => {
     const {t} = useTranslation();
     const year = new Date().getFullYear();
+    const store = createStore(t);
 
 
     return (
@@ -56,13 +58,16 @@ const Footer = () => {
                             {t("massageType")}
                         </h3>
                         <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                            <li className="mb-4" onClick={handleClick}>
-                                <NavLink to={ROUTES.ABOUT_US} className=" hover:underline">
-                                    {t("about_us")}
-                                </NavLink>
-                            </li>
+                            {store.massageTypes.map((massage) => (
+                                <li key={massage.id} className="mb-4" onClick={handleClick}>
+                                    <NavLink to={`/massage/${massage.url}`} onClick={handleClick} className="hover:underline">
+                                        {massage.name}
+                                    </NavLink>
+                                </li>
+                            ))}
                         </ul>
                     </div>
+
                     <div>
                         <h3 className="mb-6 text-sm font-semibold uppercase text-white">
                             {t("aboutUs")}

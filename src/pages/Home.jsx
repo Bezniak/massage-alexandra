@@ -2,7 +2,7 @@ import React from 'react';
 import Slider from "../components/Slider/Slider.jsx";
 import PhotoCollage from "../components/PhotoCollage/PhotoCollage.jsx";
 import NewSolution from "../components/NewSolution/NewSolution.jsx";
-import EnjoyDifference from "../components/EnjoyDifference/EnjoyDifference.jsx";
+import BookForm from "../components/BookForm/BookForm.jsx";
 import Benefits from "../components/Benefits/Benefits.jsx";
 import IconsContacts from "../components/IconsContacts/IconsContacts.jsx";
 import Map from "../Map/Map.jsx";
@@ -13,7 +13,7 @@ const Home = () => {
         <div>
             <Slider/>
             <PhotoCollage/>
-            <EnjoyDifference/>
+            <BookForm/>
             <NewSolution/>
             <Benefits/>
             <IconsContacts/>

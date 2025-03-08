@@ -1,8 +1,8 @@
 import React from 'react';
 import {useTranslation} from "react-i18next";
-import EnjoyDifference from "../EnjoyDifference/EnjoyDifference.jsx";
+import BookForm from "../BookForm/BookForm.jsx";
 
-const Book = ({isOpen, setIsModalOpen}) => {
+const ModalWindow = ({isOpen, setIsModalOpen}) => {
     const {t} = useTranslation();
     const placement = 'right'; // Set drawer placement
     const backdrop = true; // Backdrop effect
@@ -36,10 +36,7 @@ const Book = ({isOpen, setIsModalOpen}) => {
                     </svg>
                     <span className="sr-only">Close menu</span>
                 </button>
-
-                <EnjoyDifference additionalStyle={true}/>
-
-
+                <BookForm additionalStyle={true}/>
             </div>
             {/* Backdrop */}
             {backdrop && isOpen && (
@@ -52,4 +49,4 @@ const Book = ({isOpen, setIsModalOpen}) => {
     )
 }
 
-export default Book;
+export default ModalWindow;

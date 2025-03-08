@@ -6,7 +6,6 @@ import Footer from "./components/Footer/Footer.jsx";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import Massages from "./components/Massages/Massages.jsx";
 import Massage from "./components/Massages/Massage.jsx";
-import Book from "./components/Book/Book.jsx";
 
 
 const Layout = () => {
@@ -35,16 +34,12 @@ const App = () => {
                 },
                 {
                     path: ROUTES.MASSAGE,
-                    element: <Massage />
+                    element: <Massage/>
                 },
                 {
                     path: ROUTES.MASSAGES,
                     element: <Massages/>
                 },
-                // {
-                //     path: ROUTES.BOOK,
-                //     element: <Book/>
-                // },
                 {
                     path: ROUTES.NOT_FOUND,
                     element: <NotFound/>

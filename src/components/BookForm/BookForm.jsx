@@ -11,7 +11,7 @@ import Select from 'react-select';
 const TELEGRAM_BOT_TOKEN = import.meta.env.VITE_TELEGRAM_BOT_TOKEN;
 const TELEGRAM_CHAT_ID = import.meta.env.VITE_TELEGRAM_CHAT_ID;
 
-const EnjoyDifference = ({additionalStyle}) => {
+const BookForm = ({additionalStyle}) => {
     const {register, handleSubmit, watch, setValue, formState: {errors}, clearErrors} = useForm();
     const [selectedDate, setSelectedDate] = useState(null);
     const [isSubmitted, setIsSubmitted] = useState(false);
@@ -21,8 +21,16 @@ const EnjoyDifference = ({additionalStyle}) => {
 
 
     const massageOptions = (t) => [
-        {value: 'foot', label: t("massages.foot.name"), price: 25.99},
-        {value: 'hand', label: t("massages.hand.name"), price: 25.50},
+        {value: 'facial', label: t("massages.facial.name"), price: 35},
+        {value: 'backNack', label: t("massages.backNack.name"), price: 35},
+        {value: 'relax', label: t("massages.relax.name"), price: 40},
+        {value: 'neckShoulder', label: t("massages.neckShoulder.name"), price: 20},
+        {value: 'sport', label: t("massages.sport.name"), price: 55},
+        {value: 'classic', label: t("massages.classic.name"), price: 50},
+        {value: 'foot', label: t("massages.foot.name"), price: 25},
+        {value: 'hand', label: t("massages.hand.name"), price: 25},
+        {value: 'honey', label: t("massages.honey.name"), price: 20},
+        {value: 'cupping', label: t("massages.cupping.name"), price: 10},
     ];
 
     const [selectedMassages, setSelectedMassages] = useState([]);
@@ -133,7 +141,7 @@ const EnjoyDifference = ({additionalStyle}) => {
     };
 
     return (
-        <div className='md:h-[75vh] xs:h-fit flex flex-col items-center justify-center gap-8 p-5'>
+        <div className='md:min-h-[75vh] xs:h-fit flex flex-col items-center justify-center gap-8 p-5'>
             {isSubmitted ? (
                 <div className='text-center'>
                     <h1 className='text-xl font-bold mb-4'>
@@ -256,7 +264,7 @@ const EnjoyDifference = ({additionalStyle}) => {
                                     <p className='text-red-500 text-sm text-center'>{t("required")}</p>}
                             </div>
 
-                            {totalPrice && (
+                            {additionalStyle && totalPrice > 0 && (
                                 <div className='w-full text-center mt-4'>
                                     <p className='text-lg font-bold'>{t("totalPrice")}: {totalPrice} BYN</p>
                                 </div>
@@ -264,17 +272,22 @@ const EnjoyDifference = ({additionalStyle}) => {
 
                             <div className='w-full'>
                                 <button type='submit'
-                                        className='tracking-widest w-full py-3 bg-[var(--dark-buttom)] text-white uppercase hover:cursor-pointer hover:bg-[var(--dark-buttom)]'
+                                        className='tracking-widest w-full py-3 px-3 bg-[var(--dark-buttom)] text-white uppercase hover:bg-red-500 transition'
                                 >
                                     {t("bookButton")}
                                 </button>
                             </div>
                         </form>
                     </div>
+                    {!additionalStyle && totalPrice > 0 && (
+                        <div className='w-full text-center mt-4'>
+                            <p className='text-lg font-bold'>{t("totalPrice")}: {totalPrice} BYN</p>
+                        </div>
+                    )}
                 </>
             )}
         </div>
     );
 };
 
-export default EnjoyDifference;
+export default BookForm;
