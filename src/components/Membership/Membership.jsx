@@ -2,14 +2,13 @@ import React from 'react';
 import {useTranslation} from "react-i18next";
 import {motion} from 'framer-motion';
 import {useInView} from 'react-intersection-observer';
-import MetaTags from "../../common/MetaTags.jsx"; // Import useInView hook
 
 const Membership = () => {
     const {t} = useTranslation();
 
     return (
         <>
-            <MetaTags page="membership"/>
+            {/*<MetaTags page="membership"/>*/}
             <div>
                 <motion.div
                     className='md:bg-[url(/membershipBig.jpg)] h-screen bg-center bg-no-repeat bg-cover bg-[url(/membershipMobile.jpg)] flex items-center justify-center'

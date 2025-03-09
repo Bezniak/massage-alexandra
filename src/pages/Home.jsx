@@ -7,12 +7,11 @@ import Benefits from "../components/Benefits/Benefits.jsx";
 import IconsContacts from "../components/IconsContacts/IconsContacts.jsx";
 import Map from "../Map/Map.jsx";
 import Follow from "../components/Follow/Follow.jsx";
-import MetaTags from "../common/MetaTags.jsx";
 
 const Home = () => {
     return (
        <>
-           <MetaTags page="home"/>
+           {/*<MetaTags page="home"/>*/}
            <div>
                <Slider/>
                <PhotoCollage/>

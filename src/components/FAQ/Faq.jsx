@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import {useTranslation} from "react-i18next";
 import {motion} from 'framer-motion';
-import MetaTags from "../../common/MetaTags.jsx";
 
 const Faq = () => {
     const {t} = useTranslation();
@@ -95,7 +94,7 @@ const Faq = () => {
 
     return (
         <>
-            <MetaTags page="faq"/>
+            {/*<MetaTags page="faq"/>*/}
             <div>
                 <motion.div
                     className='md:bg-[url(/faqBig.jpg)] h-screen bg-center bg-no-repeat bg-cover bg-[url(/faqMobile.jpg)] flex items-center justify-center'

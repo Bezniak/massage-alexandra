@@ -9,7 +9,6 @@ import {FaViber} from "react-icons/fa";
 import {FaSquareInstagram, FaTelegram} from "react-icons/fa6";
 import Map from "../../Map/Map.jsx";
 import {motion} from "framer-motion";
-import MetaTags from "../../common/MetaTags.jsx";
 
 const Contacts = () => {
     const {t} = useTranslation();
@@ -17,7 +16,7 @@ const Contacts = () => {
 
     return (
         <>
-            <MetaTags page="contacts"/>
+            {/*<MetaTags page="contacts"/>*/}
             <div>
                 <motion.div
                     className='md:bg-[url(/contactsBig.jpg)] h-screen bg-center bg-no-repeat bg-cover bg-[url(/contactsMobile.jpg)] flex items-center justify-center'

@@ -6,7 +6,6 @@ import {handleClick} from "../../common/helpers.js";
 import ModalWindow from "../ModalWindow/ModalWindow.jsx";
 import {Preloader} from "../Preloader/Preloader.jsx";
 import {motion} from 'framer-motion';
-import MetaTags from "../../common/MetaTags.jsx";
 
 const Massages = () => {
     const {t} = useTranslation();
@@ -30,7 +29,7 @@ const Massages = () => {
 
     return (
         <>
-            <MetaTags page="massages"/>
+            {/*<MetaTags page="massages"/>*/}
             <div>
                 <motion.div
                     className='md:bg-[url(/services.jpg)] h-screen bg-center bg-no-repeat bg-cover bg-[url(/servicesMobile.jpg)] flex items-center justify-center'

@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import {useTranslation} from "react-i18next";
 import {motion} from "framer-motion";
 import RequestForm from "./RequestForm.jsx";
-import MetaTags from "../../common/MetaTags.jsx";
 
 const scaleIn = {
     hidden: {opacity: 0, scale: 0.8},
@@ -15,7 +14,7 @@ const AboutUs = () => {
 
     return (
         <>
-            <MetaTags page="aboutUs"/>
+            {/*<MetaTags page="aboutUs"/>*/}
             <div>
                 <motion.div
                     className='md:bg-[url(/aboutUsBig.jpg)] h-screen bg-center bg-no-repeat bg-cover bg-[url(/aboutUsMobile.jpg)] flex items-center justify-center'
