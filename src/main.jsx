@@ -10,9 +10,9 @@ import {HelmetProvider} from "react-helmet-async";
 createRoot(document.getElementById('root')).render(
     <AuthProvider>
         <HelmetProvider>
-        <Suspense fallback={<Preloader/>}>
-            <App/>
-        </Suspense>
+            <Suspense fallback={<Preloader/>}>
+                <App/>
+            </Suspense>
         </HelmetProvider>
     </AuthProvider>
 )
