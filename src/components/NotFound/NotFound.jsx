@@ -8,17 +8,16 @@ const NotFound = () => {
 
 
     return (
-        <div className='dark:bg-gray-900 text-gray-900 dark:text-gray-100'>
-            <div className='h-screen flex flex-col items-center justify-center'>
-                <h1 className='text-4xl mb-10'>
-                    {t("pageNotFoundTitle")}
-                </h1>
-                <NavLink to={ROUTES.HOME}
-                         className='w-fit text-center border border-black py-3 px-6 rounded hover:bg-black hover:text-white transition dark:hover:bg-white dark:hover:text-black dark:border-white'
-                >
-                    {t("to_main")}
-                </NavLink>
-            </div>
+        <div
+            className='md:bg-[url(/contactsBig.jpg)] h-screen bg-center bg-no-repeat bg-cover bg-[url(/contactsMobile.jpg)] flex flex-col gap-10 items-center justify-center'>
+            <h1 className="container text-white text-center z-50">
+                {t("pageNotFoundTitle")}
+            </h1>
+            <NavLink to={ROUTES.HOME}
+                     className='tracking-widest w-fit py-3 px-6 bg-white text-black rounded uppercase hover:bg-red-500 hover:text-white transition'
+            >
+                {t("to_main")}
+            </NavLink>
         </div>
     );
 };

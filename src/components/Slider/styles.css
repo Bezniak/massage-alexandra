@@ -9,6 +9,7 @@
     height: 100%;
     object-fit: cover;
 }
+
 .smooth-transition .swiper-wrapper {
     transition-timing-function: ease-in-out !important; /* Делаем анимацию мягче */
 }

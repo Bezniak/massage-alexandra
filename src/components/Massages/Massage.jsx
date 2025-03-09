@@ -13,16 +13,15 @@ const Massage = () => {
     const [loading, setLoading] = useState(true);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    // Animation configuration for scaling and fading in
-    const fadeInScale = {
-        hidden: {opacity: 0, scale: 0.8},
-        visible: {opacity: 1, scale: 1, transition: {duration: 0.6, ease: "easeOut"}},
+    // Новая анимация для сдвига снизу вверх с увеличением прозрачности
+    const slideUpFade = {
+        hidden: {opacity: 0, y: 50},
+        visible: {opacity: 1, y: 0, transition: {duration: 0.8, ease: "easeOut"}},
     };
 
     // Найти нужный массаж по URL
     const massage = store.massageTypes.find(m => m.url === id);
 
-    // Simulate a loading process, you can remove it once your data fetching logic is added
     useEffect(() => {
         if (massage) {
             setLoading(false); // Set loading to false when the massage data is available
@@ -30,7 +29,7 @@ const Massage = () => {
     }, [massage]);
 
     if (loading) {
-        return <Preloader />;
+        return <Preloader/>;
     }
 
     if (!massage) {
@@ -39,59 +38,71 @@ const Massage = () => {
 
     return (
         <div>
-            <div
+            {/* Background Image for Mobile View */}
+            <motion.div
                 style={{backgroundImage: `url(${massage.img})`}}
                 className="h-screen bg-center bg-no-repeat bg-cover md:hidden flex items-center justify-center"
+                initial={{opacity: 0}}
+                animate={{opacity: 1}}
+                transition={{duration: 1}}
+                whileInView="visible"
+                viewport={{once: false}} // Keeps the animation on every scroll
             >
-                <div>
+                <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1}}>
                     <h1 className='text-white'>
                         {massage.name}
                     </h1>
-                </div>
-            </div>
+                </motion.div>
+            </motion.div>
 
-            <div
+            {/* Background Image for Desktop View */}
+            <motion.div
                 style={{backgroundImage: `url(${massage.bigImg})`}}
                 className="h-screen bg-center bg-no-repeat bg-cover hidden md:flex items-center justify-center"
+                initial={{opacity: 0}}
+                animate={{opacity: 1}}
+                transition={{duration: 1}}
+                whileInView="visible"
+                viewport={{once: false}} // Keeps the animation on every scroll
             >
-                <div>
+                <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1}}>
                     <h1 className='text-white'>
                         {massage.name}
                     </h1>
-                </div>
-            </div>
+                </motion.div>
+            </motion.div>
 
+            {/* Massage Advantages Section */}
             <motion.h1
                 className='mt-10 text-center text-3xl mb-12 dark:text-white'
-                variants={fadeInScale}
+                variants={slideUpFade}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{once: true}}
+                viewport={{once: false}} // Keeps the animation on every scroll
             >
                 {t("massageAdvantages")}
             </motion.h1>
 
+            {/* Additional Information Cards */}
             <div className='flex flex-wrap justify-center gap-8 mb-20'>
                 {massage.additionalInfo.map(info => (
                     <React.Fragment key={info.id}>
                         <motion.div
-                            key={info.id + "_image"}
                             className="w-96 h-96 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-                            variants={fadeInScale}
+                            variants={slideUpFade}
                             initial="hidden"
                             whileInView="visible"
-                            viewport={{once: true}}
+                            viewport={{once: false}} // Keeps the animation on every scroll
                         >
                             <img src={info.image} alt="photo" className="w-full h-full object-cover rounded-lg"/>
                         </motion.div>
 
                         <motion.div
-                            key={info.id + "_text"}
                             className="w-96 h-96 bg-gray-200 dark:bg-gray-800 dark:border-gray-700 rounded-lg flex items-center justify-center p-5"
-                            variants={fadeInScale}
+                            variants={slideUpFade}
                             initial="hidden"
                             whileInView="visible"
-                            viewport={{once: true}}
+                            viewport={{once: false}} // Keeps the animation on every scroll
                         >
                             <p className='text-center tracking-widest'>
                                 {info.text}
@@ -101,7 +112,15 @@ const Massage = () => {
                 ))}
             </div>
 
-            <div className='mb-18 h-44 w-fit mx-auto flex items-center'>
+            {/* Book Button Section */}
+            <motion.div
+                className='mb-18 h-44 w-fit mx-auto flex items-center'
+                initial={{opacity: 0}}
+                animate={{opacity: 1}}
+                transition={{delay: 0.5, duration: 0.6}}
+                whileInView="visible"
+                viewport={{once: false}} // Keeps the animation on every scroll
+            >
                 <button
                     onClick={() => setIsModalOpen(true)}
                     className='tracking-widest w-fit py-4 px-10 rounded-md bg-[var(--dark-buttom)] text-white uppercase hover:bg-red-500 transition'
@@ -109,10 +128,8 @@ const Massage = () => {
                     {t("bookButton")}
                 </button>
 
-                {isModalOpen && <ModalWindow isOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />}
-            </div>
-
-
+                {isModalOpen && <ModalWindow isOpen={isModalOpen} setIsModalOpen={setIsModalOpen}/>}
+            </motion.div>
         </div>
     );
 };

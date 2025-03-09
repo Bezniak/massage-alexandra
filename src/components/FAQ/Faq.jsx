@@ -1,16 +1,16 @@
 import React, {useState} from 'react';
 import {useTranslation} from "react-i18next";
+import {motion} from 'framer-motion';
 
 const Faq = () => {
     const {t} = useTranslation();
-    // Track multiple open items with an array
     const [openItemIds, setOpenItemIds] = useState([]);
 
     const toggleItem = (id) => {
         setOpenItemIds((prevIds) =>
             prevIds.includes(id)
-                ? prevIds.filter((itemId) => itemId !== id) // Close if it's already open
-                : [...prevIds, id] // Open if it's closed
+                ? prevIds.filter((itemId) => itemId !== id)
+                : [...prevIds, id]
         );
     };
 
@@ -90,21 +90,24 @@ const Faq = () => {
             ask: t("faqPage.ask_15"),
             answer: t("faqPage.answer_15")
         },
-
-    ]
-
+    ];
 
     return (
         <div>
-            <div
-                className='md:bg-[url(/faqBig.jpg)] h-screen bg-center bg-no-repeat bg-cover bg-[url(/faqMobile.jpg)] flex items-center justify-center'>
+            <motion.div
+                className='md:bg-[url(/faqBig.jpg)] h-screen bg-center bg-no-repeat bg-cover bg-[url(/faqMobile.jpg)] flex items-center justify-center'
+                initial={{opacity: 0}}
+                animate={{opacity: 1}}
+                transition={{duration: 1}}
+            >
                 <h1 className="container text-white text-center z-50">
                     {t("FAQuestion")}
                 </h1>
-            </div>
-            <div className='container mx-auto p-5 my-10 '>
+            </motion.div>
+
+            <div className='container mx-auto p-5 my-10'>
                 <div className="flex flex-wrap gap-8">
-                    {faq?.map((item) => (
+                    {faq.map((item) => (
                         <div
                             id={`accordion-collapse-${item.id}`}
                             key={item.id}
@@ -139,20 +142,24 @@ const Faq = () => {
                                     </svg>
                                 </button>
                             </h2>
-                            <div
+                            <motion.div
                                 id={`accordion-collapse-body-${item.id}`}
-                                className={`${openItemIds.includes(item.id) ? "" : "hidden"}`}
                                 aria-labelledby={`accordion-collapse-heading-${item.id}`}
+                                initial={{opacity: 0, height: 0}}
+                                animate={{
+                                    opacity: openItemIds.includes(item.id) ? 1 : 0,
+                                    height: openItemIds.includes(item.id) ? "auto" : 0,
+                                }}
+                                transition={{duration: 0.5}}
                             >
                                 <div className="text-lg px-2 text-justify mt-3">
                                     <p className="mb-2">{item.answer}</p>
                                 </div>
-                            </div>
+                            </motion.div>
                         </div>
                     ))}
                 </div>
             </div>
-
         </div>
     );
 };

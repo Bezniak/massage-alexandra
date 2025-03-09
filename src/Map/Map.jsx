@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
+import React, {useEffect, useState} from 'react';
+import {MapContainer, Marker, Popup, TileLayer} from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import markerIcon from 'leaflet/dist/images/marker-icon.png';
 import markerIconShadow from 'leaflet/dist/images/marker-shadow.png';
-import { useTranslation } from "react-i18next";
-import { Preloader } from "../components/Preloader/Preloader.jsx";
+import {useTranslation} from "react-i18next";
+import {Preloader} from "../components/Preloader/Preloader.jsx";
 
 // Настраиваем иконку маркера
 const defaultIcon = new L.Icon({
@@ -18,7 +18,7 @@ const defaultIcon = new L.Icon({
 L.Marker.prototype.options.icon = defaultIcon;
 
 const Map = () => {
-    const { t } = useTranslation();
+    const {t} = useTranslation();
     const coordinateString = '53.695212, 23.822594'; // Координаты Гродно, ул. Максима Горького 65
     const [coordinate, setCoordinate] = useState(null);
 
@@ -47,7 +47,7 @@ const Map = () => {
                     </Marker>
                 </MapContainer>
             ) : (
-                <Preloader />
+                <Preloader/>
             )}
         </div>
     );

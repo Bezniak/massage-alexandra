@@ -1,4 +1,4 @@
-import {StrictMode, Suspense} from 'react'
+import {Suspense} from 'react'
 import './18n';
 import {createRoot} from 'react-dom/client'
 import './index.css'
@@ -8,10 +8,8 @@ import {Preloader} from "./components/Preloader/Preloader.jsx";
 
 createRoot(document.getElementById('root')).render(
     <AuthProvider>
-        <StrictMode>
-            <Suspense fallback={<Preloader/>}>
-                <App/>
-            </Suspense>
-        </StrictMode>
+        <Suspense fallback={<Preloader/>}>
+            <App/>
+        </Suspense>
     </AuthProvider>
 )

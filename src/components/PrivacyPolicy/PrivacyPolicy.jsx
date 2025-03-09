@@ -1,5 +1,6 @@
 import React from 'react';
 import {useTranslation} from "react-i18next";
+import {motion} from "framer-motion";
 
 const PrivacyPolicy = () => {
     const {t} = useTranslation();
@@ -8,12 +9,17 @@ const PrivacyPolicy = () => {
     return (
         <>
             <div>
-                <div
-                    className='md:bg-[url(/ppBig.jpg)] h-screen bg-center bg-no-repeat bg-cover bg-[url(/ppMobile.jpg)] flex items-center justify-center'>
-                    <h1 className="container text-black text-center z-50">
+                <motion.div
+                    className='md:bg-[url(/ppBig.jpg)] h-screen bg-center bg-no-repeat bg-cover bg-[url(/ppMobile.jpg)] flex items-center justify-center'
+                    initial={{opacity: 0}}
+                    animate={{opacity: 1}}
+                    transition={{duration: 1}}
+                >
+                    <h1 className="container text-white text-center z-50">
                         {t("privacyPolicy.privacy_policy")}
                     </h1>
-                </div>
+                </motion.div>
+
                 <div className='container p-4 mt-10 mb-16 mx-auto w-full'>
                     <h2 className='font-semibold mb-3'>
                         {t("privacyPolicy.introduction")}

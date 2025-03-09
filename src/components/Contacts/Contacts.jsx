@@ -5,9 +5,10 @@ import {IoLocation} from "react-icons/io5";
 import {NavLink} from "react-router-dom";
 import {LuPhone} from "react-icons/lu";
 import {IoIosMail} from "react-icons/io";
-import {FaFacebook, FaLinkedin, FaTiktok, FaViber} from "react-icons/fa";
+import {FaViber} from "react-icons/fa";
 import {FaSquareInstagram, FaTelegram} from "react-icons/fa6";
 import Map from "../../Map/Map.jsx";
+import {motion} from "framer-motion";
 
 const Contacts = () => {
     const {t} = useTranslation();
@@ -15,12 +16,17 @@ const Contacts = () => {
 
     return (
         <div>
-            <div
-                className='md:bg-[url(/contactsBig.jpg)] h-screen bg-center bg-no-repeat bg-cover bg-[url(/contactsMobile.jpg)] flex items-center justify-center'>
+            <motion.div
+                className='md:bg-[url(/contactsBig.jpg)] h-screen bg-center bg-no-repeat bg-cover bg-[url(/contactsMobile.jpg)] flex items-center justify-center'
+                initial={{opacity: 0}}
+                animate={{opacity: 1}}
+                transition={{duration: 1}}
+            >
                 <h1 className="container text-white text-center z-50">
                     {t("contacts")}
                 </h1>
-            </div>
+            </motion.div>
+
             <div
                 className='md:container xs:p-4 mt-10 mb-32 md:w-10/12 mx-auto flex md:flex-row xs:flex-col justify-center items-start md:gap-20'>
                 <div className='flex flex-1 flex-col items-start justify-start'>
