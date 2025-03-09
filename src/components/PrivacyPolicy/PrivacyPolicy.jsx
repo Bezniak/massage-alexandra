@@ -15,7 +15,7 @@ const PrivacyPolicy = () => {
                     animate={{opacity: 1}}
                     transition={{duration: 1}}
                 >
-                    <h1 className="container text-white text-center z-50">
+                    <h1 className="container text-black text-center">
                         {t("privacyPolicy.privacy_policy")}
                     </h1>
                 </motion.div>

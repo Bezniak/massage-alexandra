@@ -12,7 +12,7 @@ const Follow = () => {
     };
 
     return (
-        <div className="grid grid-cols-3 items-center w-full gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 items-center w-full gap-4">
             {/* Левая часть с картинками */}
             <motion.div
                 className="grid grid-cols-2 gap-4 w-full h-[500px]"
@@ -51,14 +51,14 @@ const Follow = () => {
                     href="https://www.instagram.com/massage_aliaksandra/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-3xl cursor-pointer font-light hover:text-red-500 transition-colors"
+                    className="text-2xl md:text-3xl cursor-pointer font-light hover:text-red-500 transition-colors"
                 >
                     {t("followUs")}
                 </a>
                 <motion.img
                     src="/sunset.png"
                     alt="sun"
-                    className="size-32"
+                    className="size-18 md:size-32"
                     variants={fadeIn}
                     initial="hidden"
                     whileInView="visible"

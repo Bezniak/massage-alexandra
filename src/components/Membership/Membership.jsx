@@ -14,7 +14,7 @@ const Membership = () => {
                 animate={{opacity: 1}}
                 transition={{duration: 1}}
             >
-                <h1 className="container text-white text-center z-50">
+                <h1 className="container text-white text-center z-10">
                     {t("membership")}
                 </h1>
             </motion.div>

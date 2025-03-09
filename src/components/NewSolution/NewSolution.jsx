@@ -1,6 +1,9 @@
 import React from "react";
 import {useTranslation} from "react-i18next";
 import {motion} from "framer-motion";
+import {NavLink} from "react-router-dom";
+import {ROUTES} from "../../config/routes.js";
+import {handleClick} from "../../common/helpers.js"; // Import NavLink
 
 const NewSolution = () => {
     const {t} = useTranslation();
@@ -56,12 +59,13 @@ const NewSolution = () => {
             >
                 <h2>{t("newSolutionTitle")}</h2>
                 <p className="mt-4 leading-relaxed">{t("newSolutionDesc")}</p>
-                <motion.button
-                    className="mt-16 hover:underline transition hover:cursor-pointer text-sm font-medium"
-                    whileHover={{scale: 1.1}}
+                <NavLink
+                    to={ROUTES.MASSAGES} // Navigate to the massages route
+                    onClick={handleClick}
+                    className="mt-16 block hover:underline transition hover:cursor-pointer text-sm font-medium"
                 >
                     {t("seeMore")}
-                </motion.button>
+                </NavLink>
             </motion.div>
         </div>
     );

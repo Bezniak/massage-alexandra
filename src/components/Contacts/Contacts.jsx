@@ -22,13 +22,13 @@ const Contacts = () => {
                 animate={{opacity: 1}}
                 transition={{duration: 1}}
             >
-                <h1 className="container text-white text-center z-50">
+                <h1 className="container text-white text-center z-10">
                     {t("contacts")}
                 </h1>
             </motion.div>
 
             <div
-                className='md:container xs:p-4 mt-10 mb-32 md:w-10/12 mx-auto flex md:flex-row xs:flex-col justify-center items-start md:gap-20'>
+                className='container p-4 mt-10 mb-32 md:w-10/12 mx-auto flex md:flex-row flex-col justify-center items-start md:gap-20'>
                 <div className='flex flex-1 flex-col items-start justify-start'>
                     <div className='mx-auto'>
                         <h2 className='text-2xl text-center'>
