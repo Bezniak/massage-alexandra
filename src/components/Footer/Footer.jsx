@@ -109,9 +109,9 @@ const Footer = () => {
                 </div>
 
                 <div className="px-4 py-6 bg-gray-900 flex flex-col items-center justify-between">
-                    <div className="flex mt-4 justify-between w-full space-x-5 rtl:space-x-reverse">
-                        <div>
-                                <span className="text-base text-white sm:text-center">
+                    <div className="flex flex-wrap gap-8 mt-4 justify-between w-full space-x-5 rtl:space-x-reverse">
+                        <div className='text-center mx-auto'>
+                                <span className="text-base text-white text-center">
                                 © {year} <NavLink to={ROUTES.HOME} onClick={handleClick}>Massage Grodno™</NavLink>.
                                     &nbsp;
                                     <a href="https://contragent.by/unp/590210932"
@@ -119,13 +119,14 @@ const Footer = () => {
                                        rel="noopener noreferrer"
                                        className="hover:text-white transition"
                                     >
+                                        <br/>
                                         {t("UNP")}
                                     </a>
                                     &nbsp;
                                     {t("all_right_reserved")}
                             </span>
                         </div>
-                        <div className='flex gap-8'>
+                        <div className='flex mx-auto gap-8'>
                             <a href="https://www.facebook.com/profile.php?id=100070173889307" target='_blank'
                                className="text-gray-400 hover:text-white">
                                 <svg className="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -173,7 +174,7 @@ const Footer = () => {
                             </a>
                         </div>
                     </div>
-                    <div className='text-center mt-5'>
+                    <div className='text-center mt-10'>
                         <p className='text-white text-sm'>
                             {t("developed_by")} &nbsp;
                             <a href="https://www.linkedin.com/in/ivan-bezniak-2634a11a0/"
