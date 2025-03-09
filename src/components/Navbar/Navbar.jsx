@@ -86,7 +86,7 @@ const Navbar = () => {
                     </div>
 
                     <div
-                        className={`$ ${isMobileMenuOpen ? 'block' : 'hidden'} w-full md:flex items-center md:w-auto md:bg-transparent xs:bg-black md:dark:bg-transparent xs:dark:bg-gray-900`}
+                        className={`${isMobileMenuOpen ? 'block' : 'hidden'} w-full md:flex items-center md:w-auto bg-[var(--bg-mobile-menu)] md:bg-transparent`}
                         id="mobile-dropdown"
                     >
                         <ul className="flex flex-col font-medium p-4 md:p-0 border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
