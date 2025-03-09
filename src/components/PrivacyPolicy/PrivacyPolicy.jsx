@@ -1,6 +1,7 @@
 import React from 'react';
 import {useTranslation} from "react-i18next";
 import {motion} from "framer-motion";
+import MetaTags from "../../common/MetaTags.jsx";
 
 const PrivacyPolicy = () => {
     const {t} = useTranslation();
@@ -8,6 +9,7 @@ const PrivacyPolicy = () => {
 
     return (
         <>
+            <MetaTags page="privacyPolicy"/>
             <div>
                 <motion.div
                     className='md:bg-[url(/ppBig.jpg)] h-screen bg-center bg-no-repeat bg-cover bg-[url(/ppMobile.jpg)] flex items-center justify-center'

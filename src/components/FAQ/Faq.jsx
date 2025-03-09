@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {useTranslation} from "react-i18next";
 import {motion} from 'framer-motion';
+import MetaTags from "../../common/MetaTags.jsx";
 
 const Faq = () => {
     const {t} = useTranslation();
@@ -93,74 +94,77 @@ const Faq = () => {
     ];
 
     return (
-        <div>
-            <motion.div
-                className='md:bg-[url(/faqBig.jpg)] h-screen bg-center bg-no-repeat bg-cover bg-[url(/faqMobile.jpg)] flex items-center justify-center'
-                initial={{opacity: 0}}
-                animate={{opacity: 1}}
-                transition={{duration: 1}}
-            >
-                <h1 className="container text-white text-center z-10">
-                    {t("FAQuestion")}
-                </h1>
-            </motion.div>
+        <>
+            <MetaTags page="faq"/>
+            <div>
+                <motion.div
+                    className='md:bg-[url(/faqBig.jpg)] h-screen bg-center bg-no-repeat bg-cover bg-[url(/faqMobile.jpg)] flex items-center justify-center'
+                    initial={{opacity: 0}}
+                    animate={{opacity: 1}}
+                    transition={{duration: 1}}
+                >
+                    <h1 className="container text-white text-center z-10">
+                        {t("FAQuestion")}
+                    </h1>
+                </motion.div>
 
-            <div className='container mx-auto p-5 my-10'>
-                <div className="flex flex-wrap gap-8">
-                    {faq.map((item) => (
-                        <div
-                            id={`accordion-collapse-${item.id}`}
-                            key={item.id}
-                            className="md:w-2/5 w-full mx-auto"
-                        >
-                            <h2 id={`accordion-collapse-heading-${item.id}`}>
-                                <button
-                                    type="button"
-                                    className="flex items-center justify-between w-full p-5 font-medium border border-[var(--footer)] rounded"
-                                    onClick={() => toggleItem(item.id)}
-                                    aria-expanded={openItemIds.includes(item.id)}
-                                    aria-controls={`accordion-collapse-body-${item.id}`}
-                                >
-                                    <p className="text-lg text-left">{item.ask}</p>
-                                    <svg
-                                        data-accordion-icon
-                                        className={`w-3 h-3 shrink-0 transform ${
-                                            openItemIds.includes(item.id) ? "" : "rotate-180"
-                                        }`}
-                                        aria-hidden="true"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="none"
-                                        viewBox="0 0 10 6"
-                                    >
-                                        <path
-                                            stroke="currentColor"
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            strokeWidth="2"
-                                            d="M9 5 5 1 1 5"
-                                        />
-                                    </svg>
-                                </button>
-                            </h2>
-                            <motion.div
-                                id={`accordion-collapse-body-${item.id}`}
-                                aria-labelledby={`accordion-collapse-heading-${item.id}`}
-                                initial={{opacity: 0, height: 0}}
-                                animate={{
-                                    opacity: openItemIds.includes(item.id) ? 1 : 0,
-                                    height: openItemIds.includes(item.id) ? "auto" : 0,
-                                }}
-                                transition={{duration: 0.5}}
+                <div className='container mx-auto p-5 my-10'>
+                    <div className="flex flex-wrap gap-8">
+                        {faq.map((item) => (
+                            <div
+                                id={`accordion-collapse-${item.id}`}
+                                key={item.id}
+                                className="md:w-2/5 w-full mx-auto"
                             >
-                                <div className="text-lg px-2 text-justify mt-3">
-                                    <p className="mb-2">{item.answer}</p>
-                                </div>
-                            </motion.div>
-                        </div>
-                    ))}
+                                <h2 id={`accordion-collapse-heading-${item.id}`}>
+                                    <button
+                                        type="button"
+                                        className="flex items-center justify-between w-full p-5 font-medium border border-[var(--footer)] rounded"
+                                        onClick={() => toggleItem(item.id)}
+                                        aria-expanded={openItemIds.includes(item.id)}
+                                        aria-controls={`accordion-collapse-body-${item.id}`}
+                                    >
+                                        <p className="text-lg text-left">{item.ask}</p>
+                                        <svg
+                                            data-accordion-icon
+                                            className={`w-3 h-3 shrink-0 transform ${
+                                                openItemIds.includes(item.id) ? "" : "rotate-180"
+                                            }`}
+                                            aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 10 6"
+                                        >
+                                            <path
+                                                stroke="currentColor"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth="2"
+                                                d="M9 5 5 1 1 5"
+                                            />
+                                        </svg>
+                                    </button>
+                                </h2>
+                                <motion.div
+                                    id={`accordion-collapse-body-${item.id}`}
+                                    aria-labelledby={`accordion-collapse-heading-${item.id}`}
+                                    initial={{opacity: 0, height: 0}}
+                                    animate={{
+                                        opacity: openItemIds.includes(item.id) ? 1 : 0,
+                                        height: openItemIds.includes(item.id) ? "auto" : 0,
+                                    }}
+                                    transition={{duration: 0.5}}
+                                >
+                                    <div className="text-lg px-2 text-justify mt-3">
+                                        <p className="mb-2">{item.answer}</p>
+                                    </div>
+                                </motion.div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 

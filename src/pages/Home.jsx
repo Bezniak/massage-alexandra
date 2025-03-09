@@ -7,19 +7,23 @@ import Benefits from "../components/Benefits/Benefits.jsx";
 import IconsContacts from "../components/IconsContacts/IconsContacts.jsx";
 import Map from "../Map/Map.jsx";
 import Follow from "../components/Follow/Follow.jsx";
+import MetaTags from "../common/MetaTags.jsx";
 
 const Home = () => {
     return (
-        <div>
-            <Slider/>
-            <PhotoCollage/>
-            <BookForm/>
-            <NewSolution/>
-            <Benefits/>
-            <IconsContacts/>
-            <Map/>
-            <Follow/>
-        </div>
+       <>
+           <MetaTags page="home"/>
+           <div>
+               <Slider/>
+               <PhotoCollage/>
+               <BookForm/>
+               <NewSolution/>
+               <Benefits/>
+               <IconsContacts/>
+               <Map/>
+               <Follow/>
+           </div>
+       </>
     );
 };
 
