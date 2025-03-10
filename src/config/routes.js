@@ -8,14 +8,13 @@ export const ROUTES = {
     MEMBERSHIP: "/membership",
     MASSAGES: "/massages",
     MASSAGE: "/massage/:id",
-    FOOT_MASSAGE: "footMassage",
-    HAND_MASSAGE: "handMassage",
-    HONEY_MASSAGE: "honeyMassage",
+
     CUPPING_MASSAGE: "cuppingMassage",
-    CLASSIC_MASSAGE: "classicBodyMassage",
-    FACIAL_MASSAGE: "facialMassage",
-    BACK_NACK_MASSAGE: "backNackMassage",
-    RELAX_MASSAGE: "relaxMassage",
+    BACK_MASSAGE: "backMassage",
     NECK_SHOULDER_MASSAGE: "neckShoulderMassage",
-    SPORT_MASSAGE: "sportMassage",
+    INDIVIDUAL_REJUVENATION_PROGRAM: "individualRejuvenationProgram",
+    REJUVENATING_FACIAL_MASSAGE: "rejuvenatingFacialMassage",
+    LIFTING_MASK: "liftingMask",
+    TAPING_ONE_ZONE: "tappingOneZone",
+
 }

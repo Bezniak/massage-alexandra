@@ -3,125 +3,207 @@ import {ROUTES} from "../config/routes.js";
 export const createStore = (t) => ({
     massageTypes: [
         {
-            id: 1,
-            url: ROUTES.FACIAL_MASSAGE,
-            img: '/facialMassageMobile.jpg',
-            bigImg: '/facialMassageBig.jpg',
-            name: t("massages.facial.name"),
-            price: 35,
-            time: 30,
+            id: 2,
+            url: ROUTES.INDIVIDUAL_REJUVENATION_PROGRAM,
+            img: '/individualMobile.jpg',
+            bigImg: '/individualBig.jpg',
+            name: t("massages.individual_rejuvenation_program.name"),
+            price: 75,
+            time: 90,
             additionalInfo: [
                 {
                     id: 1,
-                    text: t("massages.facial.desc_1"),
-                    image: '/facial_1.jpg'
+                    text: t("massages.individual_rejuvenation_program.desc_1"),
+                    image: '/individual_1.jpg'
                 },
                 {
                     id: 2,
-                    text: t("massages.facial.desc_2"),
-                    image: '/facial_2.jpg'
+                    text: t("massages.individual_rejuvenation_program.desc_2"),
+                    image: '/individual_2.jpg'
                 },
                 {
                     id: 3,
-                    text: t("massages.facial.desc_3"),
-                    image: '/facial_3.jpg'
+                    text: t("massages.individual_rejuvenation_program.desc_3"),
+                    image: '/individual_3.jpg'
                 },
                 {
                     id: 4,
-                    text: t("massages.facial.desc_4"),
-                    image: '/facial_4.jpg'
+                    text: t("massages.individual_rejuvenation_program.desc_4"),
+                    image: '/individual_4.jpg'
                 },
                 {
                     id: 5,
-                    text: t("massages.facial.desc_5"),
-                    image: '/facial_5.jpg'
+                    text: t("massages.individual_rejuvenation_program.desc_5"),
+                    image: '/individual_5.jpg'
                 },
                 {
                     id: 6,
-                    text: t("massages.facial.desc_6"),
-                    image: '/facial_6.jpg'
+                    text: t("massages.individual_rejuvenation_program.desc_6"),
+                    image: '/individual_6.jpg'
                 },
             ]
         },
         {
             id: 2,
-            url: ROUTES.BACK_NACK_MASSAGE,
-            img: '/backNackMassageMobile.jpg',
-            bigImg: '/backNackBig.jpg',
-            name: t("massages.backNack.name"),
-            price: 35,
-            time: 40,
+            url: ROUTES.REJUVENATING_FACIAL_MASSAGE,
+            img: '/rejuvenatingMobile.jpg',
+            bigImg: '/rejuvenatingBig.jpg',
+            name: t("massages.rejuvenating_facial_massage.name"),
+            price: 55,
+            time: 60,
             additionalInfo: [
                 {
                     id: 1,
-                    text: t("massages.backNack.desc_1"),
-                    image: '/backNack_1.jpg'
+                    text: t("massages.rejuvenating_facial_massage.desc_1"),
+                    image: '/rejuvenating_1.jpg'
                 },
                 {
                     id: 2,
-                    text: t("massages.backNack.desc_2"),
-                    image: '/backNack_2.jpg'
+                    text: t("massages.rejuvenating_facial_massage.desc_2"),
+                    image: '/rejuvenating_2.jpg'
                 },
                 {
                     id: 3,
-                    text: t("massages.backNack.desc_3"),
-                    image: '/backNack_3.jpg'
+                    text: t("massages.rejuvenating_facial_massage.desc_3"),
+                    image: '/rejuvenating_3.jpg'
                 },
                 {
                     id: 4,
-                    text: t("massages.backNack.desc_4"),
-                    image: '/backNack_4.jpg'
+                    text: t("massages.rejuvenating_facial_massage.desc_4"),
+                    image: '/rejuvenating_4.jpg'
                 },
                 {
                     id: 5,
-                    text: t("massages.backNack.desc_5"),
-                    image: '/backNack_5.jpg'
+                    text: t("massages.rejuvenating_facial_massage.desc_5"),
+                    image: '/rejuvenating_5.jpg'
                 },
                 {
                     id: 6,
-                    text: t("massages.backNack.desc_6"),
-                    image: '/backNack_6.jpg'
+                    text: t("massages.rejuvenating_facial_massage.desc_6"),
+                    image: '/rejuvenating_6.jpg'
                 },
             ]
         },
         {
-            id: 3,
-            url: ROUTES.RELAX_MASSAGE,
-            img: '/relaxMassageMobile.jpg',
-            bigImg: '/relaxMassageBig.jpg',
-            name: t("massages.relax.name"),
-            price: 40,
-            time: 50,
+            id: 2,
+            url: ROUTES.LIFTING_MASK,
+            img: '/liftingMaskMobile.jpg',
+            bigImg: '/liftingMaskBig.jpg',
+            name: t("massages.liftingMask.name"),
+            price: 20,
+            time: t("additionalTreatment"),
             additionalInfo: [
                 {
                     id: 1,
-                    text: t("massages.relax.desc_1"),
-                    image: '/relax_1.jpg'
+                    text: t("massages.liftingMask.desc_1"),
+                    image: '/liftingMask_1.jpg'
                 },
                 {
                     id: 2,
-                    text: t("massages.relax.desc_2"),
-                    image: '/relax_2.jpg'
+                    text: t("massages.liftingMask.desc_2"),
+                    image: '/liftingMask_2.jpg'
                 },
                 {
                     id: 3,
-                    text: t("massages.relax.desc_3"),
-                    image: '/relax_3.jpg'
+                    text: t("massages.liftingMask.desc_3"),
+                    image: '/liftingMask_3.jpg'
                 },
                 {
                     id: 4,
-                    text: t("massages.relax.desc_4"),
-                    image: '/relax_4.jpg'
+                    text: t("massages.liftingMask.desc_4"),
+                    image: '/liftingMask_4.jpg'
                 },
                 {
                     id: 5,
-                    text: t("massages.relax.desc_5"),
-                    image: '/relax_5.jpg'
+                    text: t("massages.liftingMask.desc_5"),
+                    image: '/liftingMask_5.jpg'
                 },
                 {
                     id: 6,
-                    text: t("massages.relax.desc_6"),
-                    image: '/relax_6.jpg'
+                    text: t("massages.liftingMask.desc_6"),
+                    image: '/liftingMask_6.jpg'
+                },
+            ]
+        },
+        {
+            id: 2,
+            url: ROUTES.TAPING_ONE_ZONE,
+            img: '/backMassageMobile.jpg',
+            bigImg: '/backBig.jpg',
+            name: t("massages.taping_one_zone.name"),
+            price: 15,
+            time: t("additionalTreatment"),
+            additionalInfo: [
+                {
+                    id: 1,
+                    text: t("massages.taping_one_zone.desc_1"),
+                    image: '/back_1.jpg'
+                },
+                {
+                    id: 2,
+                    text: t("massages.taping_one_zone.desc_2"),
+                    image: '/bac_2.jpg'
+                },
+                {
+                    id: 3,
+                    text: t("massages.taping_one_zone.desc_3"),
+                    image: '/back_3.jpg'
+                },
+                {
+                    id: 4,
+                    text: t("massages.taping_one_zone.desc_4"),
+                    image: '/back_4.jpg'
+                },
+                {
+                    id: 5,
+                    text: t("massages.taping_one_zone.desc_5"),
+                    image: '/back_5.jpg'
+                },
+                {
+                    id: 6,
+                    text: t("massages.taping_one_zone.desc_6"),
+                    image: '/back_6.jpg'
+                },
+            ]
+        },
+        {
+            id: 2,
+            url: ROUTES.BACK_MASSAGE,
+            img: '/backMassageMobile.jpg',
+            bigImg: '/backBig.jpg',
+            name: t("massages.back.name"),
+            price: 40,
+            time: 40,
+            additionalInfo: [
+                {
+                    id: 1,
+                    text: t("massages.back.desc_1"),
+                    image: '/back_1.jpg'
+                },
+                {
+                    id: 2,
+                    text: t("massages.back.desc_2"),
+                    image: '/bac_2.jpg'
+                },
+                {
+                    id: 3,
+                    text: t("massages.back.desc_3"),
+                    image: '/back_3.jpg'
+                },
+                {
+                    id: 4,
+                    text: t("massages.back.desc_4"),
+                    image: '/back_4.jpg'
+                },
+                {
+                    id: 5,
+                    text: t("massages.back.desc_5"),
+                    image: '/back_5.jpg'
+                },
+                {
+                    id: 6,
+                    text: t("massages.back.desc_6"),
+                    image: '/back_6.jpg'
                 },
             ]
         },
@@ -131,7 +213,7 @@ export const createStore = (t) => ({
             img: '/neckShoulderMobile.jpg',
             bigImg: '/neckShoulderBig.jpg',
             name: t("massages.neckShoulder.name"),
-            price: 20,
+            price: 25,
             time: 20,
             additionalInfo: [
                 {
@@ -163,215 +245,6 @@ export const createStore = (t) => ({
                     id: 6,
                     text: t("massages.neckShoulder.desc_6"),
                     image: '/neckShoulder_6.jpg'
-                },
-            ]
-        },
-        {
-            id: 5,
-            url: ROUTES.SPORT_MASSAGE,
-            img: '/sportMobile.jpg',
-            bigImg: '/sportBig.jpg',
-            name: t("massages.sport.name"),
-            price: 55,
-            time: 60,
-            additionalInfo: [
-                {
-                    id: 1,
-                    text: t("massages.sport.desc_1"),
-                    image: '/sport_1.jpg'
-                },
-                {
-                    id: 2,
-                    text: t("massages.sport.desc_2"),
-                    image: '/sport_2.jpg'
-                },
-                {
-                    id: 3,
-                    text: t("massages.sport.desc_3"),
-                    image: '/sport_3.jpg'
-                },
-                {
-                    id: 4,
-                    text: t("massages.sport.desc_4"),
-                    image: '/sport_4.jpg'
-                },
-                {
-                    id: 5,
-                    text: t("massages.sport.desc_5"),
-                    image: '/sport_5.jpg'
-                },
-                {
-                    id: 6,
-                    text: t("massages.sport.desc_6"),
-                    image: '/sport_6.jpg'
-                },
-            ]
-        },
-        {
-            id: 6,
-            url: ROUTES.CLASSIC_MASSAGE,
-            img: '/classicMassageMobile.jpg',
-            bigImg: '/classicMassageBig.jpg',
-            name: t("massages.classic.name"),
-            price: 50,
-            time: 60,
-            additionalInfo: [
-                {
-                    id: 1,
-                    text: t("massages.classic.desc_1"),
-                    image: '/classic_1.jpg'
-                },
-                {
-                    id: 2,
-                    text: t("massages.classic.desc_2"),
-                    image: '/classic_2.jpg'
-                },
-                {
-                    id: 3,
-                    text: t("massages.classic.desc_3"),
-                    image: '/classic_3.jpg'
-                },
-                {
-                    id: 4,
-                    text: t("massages.classic.desc_4"),
-                    image: '/classic_4.jpg'
-                },
-                {
-                    id: 5,
-                    text: t("massages.classic.desc_5"),
-                    image: '/classic_5.jpg'
-                },
-                {
-                    id: 6,
-                    text: t("massages.classic.desc_6"),
-                    image: '/classic_6.jpg'
-                },
-            ]
-        },
-        {
-            id: 7,
-            url: ROUTES.FOOT_MASSAGE,
-            img: '/footMassageVertical.jpg',
-            bigImg: '/footMassage.jpg',
-            name: t("massages.foot.name"),
-            price: 25,
-            time: 30,
-            additionalInfo: [
-                {
-                    id: 1,
-                    text: t("massages.foot.desc_1"),
-                    image: '/foot_1.jpg'
-                },
-                {
-                    id: 2,
-                    text: t("massages.foot.desc_2"),
-                    image: '/foot_2.jpg'
-                },
-                {
-                    id: 3,
-                    text: t("massages.foot.desc_3"),
-                    image: '/foot_3.jpg'
-                },
-                {
-                    id: 4,
-                    text: t("massages.foot.desc_4"),
-                    image: '/foot_4.jpg'
-                },
-                {
-                    id: 5,
-                    text: t("massages.foot.desc_5"),
-                    image: '/foot_5.jpg'
-                },
-                {
-                    id: 6,
-                    text: t("massages.foot.desc_6"),
-                    image: '/foot_6.jpg'
-                },
-            ]
-
-
-        },
-        {
-            id: 8,
-            url: ROUTES.HAND_MASSAGE,
-            img: '/handMassageMobile.jpg',
-            bigImg: '/handMassageBig.jpg',
-            name: t("massages.hand.name"),
-            price: 25,
-            time: 30,
-            additionalInfo: [
-                {
-                    id: 1,
-                    text: t("massages.hand.desc_1"),
-                    image: '/hand_1.jpg'
-                },
-                {
-                    id: 2,
-                    text: t("massages.hand.desc_2"),
-                    image: '/hand_2.jpg'
-                },
-                {
-                    id: 3,
-                    text: t("massages.hand.desc_3"),
-                    image: '/hand_3.jpg'
-                },
-                {
-                    id: 4,
-                    text: t("massages.hand.desc_4"),
-                    image: '/hand_4.jpg'
-                },
-                {
-                    id: 5,
-                    text: t("massages.hand.desc_5"),
-                    image: '/hand_5.jpg'
-                },
-                {
-                    id: 6,
-                    text: t("massages.hand.desc_6"),
-                    image: '/hand_6.jpg'
-                },
-            ]
-
-
-        },
-        {
-            id: 9,
-            url: ROUTES.HONEY_MASSAGE,
-            img: '/honeyMassageMobile.jpg',
-            bigImg: '/honeyMassageBig.jpg',
-            name: t("massages.honey.name"),
-            price: 20,
-            time: t("additionalTreatment"),
-            additionalInfo: [
-                {
-                    id: 1,
-                    text: t("massages.honey.desc_1"),
-                    image: '/honey_1.jpg'
-                },
-                {
-                    id: 2,
-                    text: t("massages.honey.desc_2"),
-                    image: '/honey_2.jpg'
-                },
-                {
-                    id: 3,
-                    text: t("massages.honey.desc_3"),
-                    image: '/honey_3.jpg'
-                },
-                {
-                    id: 4,
-                    text: t("massages.honey.desc_4"),
-                    image: '/honey_4.jpg'
-                },
-                {
-                    id: 5,
-                    text: t("massages.honey.desc_5"),
-                    image: '/honey_5.jpg'
-                },
-                {
-                    id: 6,
-                    text: t("massages.honey.desc_6"),
-                    image: '/honey_6.jpg'
                 },
             ]
         },

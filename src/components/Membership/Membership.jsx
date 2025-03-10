@@ -24,7 +24,7 @@ const Membership = () => {
                 <div className='container mx-auto py-20 grid grid-cols-1 md:grid-cols-2 gap-8'>
                     {[
                         {
-                            img: "/certificate.png",
+                            img: "/certificate.jpg",
                             title: "membershipPage.certificateTitle",
                             desc: "membershipPage.certificateDesc"
                         },
@@ -52,7 +52,7 @@ const Membership = () => {
                                 transition={{duration: 0.6, delay: index * 0.2}}
                             >
                                 <div className="h-96 flex-shrink-0">
-                                    <img className="w-full h-full object-cover" src={item.img} alt={t(item.title)}/>
+                                    <img className="w-full h-full object-contain" src={item.img} alt={t(item.title)}/>
                                 </div>
                                 <div className="p-6 flex flex-col flex-grow">
                                     <h2 className="mb-4 text-xl font-semibold">{t(item.title)}</h2>

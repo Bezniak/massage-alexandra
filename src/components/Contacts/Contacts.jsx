@@ -57,9 +57,9 @@ const Contacts = () => {
                                 <li className='mr-3 group flex items-center justify-center rounded'>
                                     <IoIosMail
                                         className='mr-3 size-6 text-gray-900 group-hover:text-red-500 transition'/>
-                                    <NavLink to={`mailto:some@gmail.com`}
+                                    <NavLink to={`mailto:savmassage.grodno@gmail.com`}
                                              className='group-hover:text-red-500 transition'>
-                                        some@gmail.com
+                                        savmassage.grodno@gmail.com
                                     </NavLink>
                                 </li>
                             </ul>
@@ -69,16 +69,6 @@ const Contacts = () => {
                                 {t("contactsPage.loinUs")}
                             </h2>
                             <ul className='flex flex-row justify-evenly text-2xl text-[var(--footer)]'>
-                                {/*<li>*/}
-                                {/*    <a*/}
-                                {/*        className='hover:text-[var(--active)] transition'*/}
-                                {/*        href="https://www.facebook.com/profile.php?id=100059235169418"*/}
-                                {/*        target="_blank"*/}
-                                {/*        rel="noreferrer"*/}
-                                {/*    >*/}
-                                {/*        <FaFacebook/>*/}
-                                {/*    </a>*/}
-                                {/*</li>*/}
                                 <li>
                                     <a
                                         className='hover:text-[var(--active)] transition'
@@ -89,26 +79,6 @@ const Contacts = () => {
                                         <FaSquareInstagram/>
                                     </a>
                                 </li>
-                                {/*<li>*/}
-                                {/*    <a*/}
-                                {/*        className='hover:text-[var(--active)] transition'*/}
-                                {/*        href="https://www.linkedin.com/in/%D0%BD%D0%B0%D1%82%D0%B0%D0%BB%D1%8C%D1%8F-%D0%B2%D0%B8%D0%BA%D1%82%D0%BE%D1%80%D0%BE%D0%B2%D0%BD%D0%B0-78baa82b0/"*/}
-                                {/*        target="_blank"*/}
-                                {/*        rel="noreferrer"*/}
-                                {/*    >*/}
-                                {/*        <FaLinkedin/>*/}
-                                {/*    </a>*/}
-                                {/*</li>*/}
-                                {/*<li>*/}
-                                {/*    <a*/}
-                                {/*        className='hover:text-[var(--active)] transition'*/}
-                                {/*        href="https://www.tiktok.com/@massage_baranovichi?_t=8kjALrIXlpt&_r=1"*/}
-                                {/*        target="_blank"*/}
-                                {/*        rel="noreferrer"*/}
-                                {/*    >*/}
-                                {/*        <FaTiktok/>*/}
-                                {/*    </a>*/}
-                                {/*</li>*/}
                                 <li>
                                     <a
                                         className='hover:text-[var(--active)] transition'

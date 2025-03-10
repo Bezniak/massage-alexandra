@@ -7,6 +7,13 @@ import {FiPhone} from 'react-icons/fi';
 import {MdOutlineDriveFileRenameOutline} from 'react-icons/md';
 import {useTranslation} from 'react-i18next';
 import Select from 'react-select';
+import dayjs from 'dayjs';
+import {useAuth} from "../../context/AuthContext.jsx";
+import 'dayjs/locale/ru'; // Импортируем нужную локаль
+import 'dayjs/locale/en'; // Импортируем английскую локаль
+import { registerLocale } from 'react-datepicker';
+import ru from 'date-fns/locale/ru';
+import enGB from 'date-fns/locale/en-GB';
 
 const TELEGRAM_BOT_TOKEN = import.meta.env.VITE_TELEGRAM_BOT_TOKEN;
 const TELEGRAM_CHAT_ID = import.meta.env.VITE_TELEGRAM_CHAT_ID;
@@ -18,22 +25,20 @@ const BookForm = ({additionalStyle}) => {
     const [bookingDetails, setBookingDetails] = useState(null);
     const [dateError, setDateError] = useState(false);  // New state for date error
     const {t} = useTranslation();
+    const [selectedMassages, setSelectedMassages] = useState([]);
+    const [availableTimes, setAvailableTimes] = useState([]);
+    const {locale} = useAuth();
 
 
     const massageOptions = (t) => [
-        {value: 'facial', label: t("massages.facial.name"), price: 35},
-        {value: 'backNack', label: t("massages.backNack.name"), price: 35},
-        {value: 'relax', label: t("massages.relax.name"), price: 40},
-        {value: 'neckShoulder', label: t("massages.neckShoulder.name"), price: 20},
-        {value: 'sport', label: t("massages.sport.name"), price: 55},
-        {value: 'classic', label: t("massages.classic.name"), price: 50},
-        {value: 'foot', label: t("massages.foot.name"), price: 25},
-        {value: 'hand', label: t("massages.hand.name"), price: 25},
-        {value: 'honey', label: t("massages.honey.name"), price: 20},
+        {value: 'individualRejuvenationProgram', label: t("massages.individual_rejuvenation_program.name"), price: 75},
+        {value: 'rejuvenatingFacialMassage', label: t("massages.rejuvenating_facial_massage.name"), price: 55},
+        {value: 'rejuvenatingFacialMassage', label: t("massages.liftingMask.name"), price: 20},
+        {value: 'rejuvenatingFacialMassage', label: t("massages.taping_one_zone.name"), price: 15},
+        {value: 'back', label: t("massages.back.name"), price: 40},
+        {value: 'neckShoulder', label: t("massages.neckShoulder.name"), price: 25},
         {value: 'cupping', label: t("massages.cupping.name"), price: 10},
     ];
-
-    const [selectedMassages, setSelectedMassages] = useState([]);
 
     const handleChange = (selectedOptions) => {
         setSelectedMassages(selectedOptions || []);
@@ -41,46 +46,42 @@ const BookForm = ({additionalStyle}) => {
         clearErrors("massageType");
     };
 
-
     const totalPrice = selectedMassages.reduce((sum, massage) => sum + massage.price, 0).toFixed(2);
 
+    useEffect(() => {
+        if (!selectedDate) return;
+        const selectedDay = dayjs(selectedDate).day(); // 0 - воскресенье, 1 - понедельник, ..., 6 - суббота
+        if (selectedDay === 0 || selectedDay === 6) {
+            setAvailableTimes([]);
+            setValue("time", "");
+            return;
+        }
+        let startHour, endHour;
+        if ([1, 3, 5].includes(selectedDay)) { // Понедельник, Среда, Пятница
+            startHour = 9;
+            endHour = 15;
+        } else if ([2, 4].includes(selectedDay)) { // Вторник, Четверг
+            startHour = 9;
+            endHour = 19;
+        }
+        const now = dayjs();
+        const isToday = dayjs(selectedDate).isSame(now, 'day');
+        let times = [];
 
-    const [availableTimes, setAvailableTimes] = useState([]);
+        for (let hour = startHour; hour <= endHour; hour++) {
+            const timeString = `${hour}:00`;
+            const timeValue = dayjs(selectedDate).hour(hour).minute(0);
+            if (isToday && timeValue.isBefore(now.add(1, 'hour'))) continue; // Не показывать прошедшее время
+            times.push({value: timeString, label: timeString});
+        }
+        setAvailableTimes(times);
+        setValue("time", ""); // Сбрасываем время при смене даты
+    }, [selectedDate]);
 
     useEffect(() => {
-        const now = new Date();
-        const selectedDay = selectedDate ? new Date(selectedDate).setHours(0, 0, 0, 0) : null;
-        const today = new Date().setHours(0, 0, 0, 0);
-
-        let times = [];
-        const startHour = 8;
-        const endHour = 19;
-
-        if (selectedDay === today) {
-            // Если выбрана сегодняшняя дата, учитываем текущее время
-            const currentHour = now.getHours();
-            const currentMinute = now.getMinutes();
-            const currentTimeInMinutes = currentHour * 60 + currentMinute;
-
-            for (let hour = startHour; hour <= endHour; hour++) {
-                const timeInMinutes = hour * 60;
-
-                // Пропускаем время, которое меньше чем на 60 минут от текущего времени
-                if (timeInMinutes <= currentTimeInMinutes + 60) {
-                    continue;
-                }
-
-                times.push({value: `${hour}:00`, label: `${hour}:00`});
-            }
-        } else {
-            // Если выбрана другая дата, показываем фиксированный диапазон
-            for (let hour = startHour; hour <= endHour; hour++) {
-                times.push({value: `${hour}:00`, label: `${hour}:00`});
-            }
-        }
-
-        setAvailableTimes(times);
-    }, [selectedDate]);
+        const locales = { ru, en: enGB };
+        registerLocale(locale, locales[locale] || enGB);
+    }, [locale]);
 
     const handleTimeChange = (selectedOption) => {
         setValue("time", selectedOption ? selectedOption.value : "");
@@ -202,17 +203,14 @@ const BookForm = ({additionalStyle}) => {
                                     <div className='w-full flex flex-row items-center justify-between'>
                                         <DatePicker
                                             selected={selectedDate}
-                                            onChange={(date) => {
-                                                setSelectedDate(date);
-                                                setDateError(false);
-                                                setValue("time", "");          // Очистить выбранное время
-                                                setAvailableTimes([]);         // Очистить доступные времена
-                                            }}
+                                            onChange={(date) => setSelectedDate(date)}
                                             minDate={new Date()}
+                                            filterDate={(date) => ![0, 6].includes(dayjs(date).day())} // Запрещаем выбор субботы и воскресенья
                                             popperPlacement="bottom-start"
                                             dateFormat='dd-MM-yyyy'
                                             placeholderText={t("selectDate")}
                                             className='w-full p-2 outline-none focus:outline-none'
+                                            locale={locale}
                                         />
                                         <CiCalendar className='size-6 text-gray-500'/>
                                     </div>
@@ -224,6 +222,8 @@ const BookForm = ({additionalStyle}) => {
                                     <div className="relative w-full">
                                         <Select
                                             options={availableTimes}
+                                            isDisabled={availableTimes.length === 0}
+                                            onChange={(option) => setValue("time", option?.value || "")}
                                             placeholder={t("selectTime")}
                                             className="w-full"
                                             styles={{
@@ -233,7 +233,6 @@ const BookForm = ({additionalStyle}) => {
                                                     boxShadow: "none",
                                                 }),
                                             }}
-                                            onChange={handleTimeChange} // Updated
                                             value={availableTimes.find((time) => time.value === watch("time")) || null}
                                         />
                                         <input

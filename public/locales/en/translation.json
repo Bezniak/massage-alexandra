@@ -11,7 +11,7 @@
   "totalPrice": "Total Price",
   "seeMore": "SEE MORE",
   "more": "Learn More",
-  "UNP": "UNP 000000",
+  "UNP": "TIN HA7706126",
   "pageNotFoundTitle": "Page Not Found",
   "to_main": "Return to Home",
   "all_right_reserved": "All rights reserved.",
@@ -61,44 +61,17 @@
     "youBookOn": "You are booked for",
     "onDate": "",
     "on": "on",
-    "address": "at: Horkaha Street 65, Grodno",
+    "address": "at: Horkaha Street 65-6, Grodno",
     "sum": "Amount to be paid"
   },
   "joinUsInstagram": "JOIN US ON INSTAGRAM",
   "bookAppointment": "BOOK A MASSAGE",
   "callUs": "CALL US +375 (44) 585-98-44",
   "followUs": "Follow us on Instagram",
-  "address": "Horkaha Street 65, Grodno",
+  "address": "Horkaha Street 65-6, Grodno",
   "massageType": "Types of Massage",
   "massageAdvantages": "Massage Benefits",
   "massages": {
-    "foot": {
-      "name": "Foot Massage",
-      "desc_1": "Helps relax muscles and relieve accumulated tension, especially beneficial after a long day of standing or walking.",
-      "desc_2": "Promotes better blood circulation in the legs, aiding in oxygen and nutrient delivery to tissues while removing waste and toxins.",
-      "desc_3": "Improves lymphatic drainage and reduces swelling, especially useful for those experiencing leg swelling after prolonged sitting or standing.",
-      "desc_4": "Encourages muscle relaxation, softens leg muscles, and enhances joint mobility, making it especially beneficial for athletes and physically active individuals.",
-      "desc_5": "Reduces fatigue and heaviness in the legs, helping them recover after extended exertion, making steps lighter and movements more comfortable.",
-      "desc_6": "Stimulates nerve endings in the feet, promoting overall relaxation and stress reduction, which helps improve well-being and sleep quality."
-    },
-    "hand": {
-      "name": "Hand Massage",
-      "desc_1": "Helps relax tense muscles and relieve fatigue after a long day of work or intense physical activity.",
-      "desc_2": "Stimulates blood circulation in the hands, delivering more oxygen and nutrients to the cells, improving their function.",
-      "desc_3": "Reduces stress and anxiety levels, promoting relaxation and improving mood.",
-      "desc_4": "Enhances joint mobility and flexibility, reducing stiffness and improving overall hand functionality.",
-      "desc_5": "Reduces swelling and improves lymphatic drainage, especially beneficial for those who spend a lot of time with tense hands or wrists.",
-      "desc_6": "Helps alleviate pain and discomfort in chronic hand conditions such as arthritis or tendonitis, improving mobility and reducing inflammation."
-    },
-    "honey": {
-      "name": "Honey Massage",
-      "desc_1": "Enhances blood circulation in the area where honey is applied.",
-      "desc_2": "Improves oxygen and nutrient supply to tissues while aiding in the removal of waste and toxins, promoting regeneration and overall health.",
-      "desc_3": "Has a relaxing effect on the body, reducing stress and tension.",
-      "desc_4": "The warmth of honey and massage movements help relieve tension and stress, contributing to overall relaxation and mood improvement.",
-      "desc_5": "Honey contains numerous nutrients and antioxidants that have beneficial effects on the skin.",
-      "desc_6": "Honey massage helps nourish and hydrate the skin, making it softer, more elastic, and radiant."
-    },
     "cupping": {
       "name": "Cupping Massage",
       "desc_1": "Stimulates blood circulation in the area where cups are applied.",
@@ -108,41 +81,14 @@
       "desc_5": "An effective method for fighting cellulite. The vacuum created by the cups improves blood circulation and lymphatic drainage, helping to break down fat deposits and enhance skin texture.",
       "desc_6": "Has a stimulating effect on internal organs, supporting their function and improving overall health."
     },
-    "classic": {
-      "name": "Classic Body Massage",
-      "desc_1": "Helps relax muscles, releasing accumulated tension.",
-      "desc_2": "Improves blood circulation, which enhances tissue and organ nourishment.",
-      "desc_3": "Enhances circulation, promoting better oxygen and nutrient delivery to the body.",
-      "desc_4": "Leaves a deep sense of relaxation and tranquility.",
-      "desc_5": "Reduces stress and anxiety by providing a soothing effect, improving overall mood.",
-      "desc_6": "Increases flexibility and mobility, as regular massage helps improve muscle and joint elasticity."
-    },
-    "facial": {
-      "name": "Facial Massage",
-      "desc_1": "Stimulates blood flow to the skin, enhancing oxygen and nutrient delivery to skin cells.",
-      "desc_2": "Improves skin tone and texture while promoting regeneration and overall skin health.",
-      "desc_3": "Relaxes facial muscles, reducing accumulated tension and stress, which can help improve mood and alleviate anxiety.",
-      "desc_4": "Boosts collagen and elastin production, two essential components responsible for skin firmness and youthfulness.",
-      "desc_5": "Enhances lymphatic drainage, helping to remove toxins and improve skin condition.",
-      "desc_6": "Reduces puffiness and improves circulation around the eyes, minimizing dark circles and swelling."
-    },
-    "backNack": {
-      "name": "Back and Neck Massage",
+    "back": {
+      "name": "Back Massage",
       "desc_1": "Relaxes muscles and improves blood circulation, relieving tension and promoting deeper relaxation.",
       "desc_2": "Effectively alleviates pain caused by muscle tension, osteochondrosis, or other back issues.",
       "desc_3": "Gentle stretching and massage movements help reduce pain and enhance mobility.",
       "desc_4": "Supports spinal alignment, strengthens back muscles, and helps prevent potential deformities.",
       "desc_5": "Stimulates overall blood circulation and lymphatic drainage, improving oxygen and nutrient delivery to cells.",
       "desc_6": "Encourages the release of endorphins, the 'happiness hormones,' which help reduce stress, improve mood, combat insomnia, and enhance sleep quality."
-    },
-    "relax": {
-      "name": "Relaxing Massage",
-      "desc_1": "Helps reduce stress and tension in the body by stimulating nerve endings that send relaxation signals to the brain.",
-      "desc_2": "Eases muscle tension, improves blood circulation and flexibility, reducing muscle and joint pain while enhancing posture and mobility.",
-      "desc_3": "Supports lymphatic drainage, aiding in the removal of toxins and waste from the body, promoting overall health and a stronger immune system.",
-      "desc_4": "Enhances sleep quality and duration by reducing insomnia, calming the nervous system, and creating a state of peace and relaxation.",
-      "desc_5": "Relieves emotional tension, improves mood, and enhances overall emotional well-being by stimulating the release of endorphins—the 'happiness hormones.'",
-      "desc_6": "Boosts concentration and mental clarity by relieving mental fatigue, improving focus, and enhancing overall cognitive performance."
     },
     "neckShoulder": {
       "name": "Neck and Shoulder Massage",
@@ -153,14 +99,41 @@
       "desc_5": "Has a calming effect on the nervous system, reducing stress and tension while promoting relaxation.",
       "desc_6": "Alleviates fatigue and enhances overall well-being by restoring energy levels and improving productivity."
     },
-    "sport": {
-      "name": "Sports Massage",
-      "desc_1": "Enhances physical performance by improving blood circulation, expanding blood vessels, and increasing oxygen and nutrient delivery to muscles, boosting strength, endurance, and flexibility.",
-      "desc_2": "Speeds up recovery after training and competitions by removing metabolic waste, reducing muscle tension and fatigue, and accelerating tissue healing after injuries.",
-      "desc_3": "Acts as an effective injury prevention method by correcting muscle imbalances, improving flexibility and coordination, and strengthening muscles, tendons, and ligaments, reducing the risk of injuries.",
-      "desc_4": "Relieves muscle tension and spasms, enhancing joint mobility and overall flexibility—especially beneficial for athletes experiencing high stress on specific muscle groups.",
-      "desc_5": "Provides both physical and psychological benefits by promoting relaxation, reducing stress and anxiety, and improving mood and overall well-being.",
-      "desc_6": "Enhances movement coordination and reduces the risk of overuse injuries, which is crucial for athletes aiming for precision and efficiency in their training."
+    "individual_rejuvenation_program": {
+      "name": "Individual Rejuvenation Program",
+      "desc_1": "aimed at collecting medical history and diagnosing the skin to determine the most effective care methods",
+      "desc_2": "includes neck and shoulder massage to relieve tension and improve blood circulation",
+      "desc_3": "scalp massage promotes relaxation and improves scalp condition",
+      "desc_4": "décolleté massage helps maintain skin firmness and elasticity",
+      "desc_5": "various facial massage techniques (myofascial, lymphatic drainage, gua sha, asahi, buccal) improve microcirculation and facial contours",
+      "desc_6": "lifting mask completes the procedure, helping to tighten the skin and give it a radiant appearance"
+    },
+    "rejuvenating_facial_massage": {
+      "name": "Rejuvenating Facial Massage",
+      "desc_1": "includes various techniques such as myofascial, lymphatic drainage, gua sha, asahi, and buccal massage for comprehensive facial care",
+      "desc_2": "décolleté massage helps maintain skin firmness and improve texture",
+      "desc_3": "facial massage techniques enhance microcirculation, helping to reduce puffiness and improve skin tone",
+      "desc_4": "scalp massage promotes relaxation and supports healthy hair and scalp conditions",
+      "desc_5": "the procedure helps relieve muscle tension and stress, leaving the skin looking refreshed and radiant",
+      "desc_6": "regular sessions contribute to a more defined facial contour and a youthful appearance"
+    },
+    "liftingMask": {
+      "name": "Lifting Mask",
+      "desc_1": "helps tighten the skin, making it more firm and refreshed",
+      "desc_2": "contributes to improving facial contours and reducing wrinkles",
+      "desc_3": "enriches the skin with nutrients, giving it a radiant glow",
+      "desc_4": "perfectly complements massage procedures, enhancing their effect",
+      "desc_5": "helps retain moisture in the skin, preventing dryness",
+      "desc_6": "recommended for all skin types, especially with the first signs of aging"
+    },
+    "taping_one_zone": {
+      "name": "Taping 1 Zone",
+      "desc_1": "helps relieve muscle tension and improve blood circulation",
+      "desc_2": "promotes the reduction of puffiness and skin lifting",
+      "desc_3": "fixes the skin in the right position for a longer-lasting effect after massage",
+      "desc_4": "helps smooth fine lines and improve facial contours",
+      "desc_5": "enhances the lymphatic drainage effect, promoting the removal of toxins",
+      "desc_6": "suitable for targeted impact on problem areas, providing visible results"
     }
   },
   "aboutUsTitle": {

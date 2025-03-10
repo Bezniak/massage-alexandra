@@ -40,22 +40,30 @@ const Massage = () => {
         <div>
             {/* Background Image for Mobile View */}
             <motion.div
-                style={{backgroundImage: `url(${massage.img})`}}
-                className="h-screen bg-center bg-no-repeat bg-cover md:hidden flex items-center justify-center"
-                initial={{opacity: 0}}
-                animate={{opacity: 1}}
-                transition={{duration: 1}}
+                style={{
+                    backgroundImage: `url(${massage.img})`,
+                }}
+                className="h-screen bg-center bg-no-repeat bg-cover md:hidden flex items-center justify-center relative"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1 }}
                 whileInView="visible"
-                viewport={{once: false}} // Keeps the animation on every scroll
+                viewport={{ once: false }}
             >
-                <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1}}>
-                    <h1 className='text-white'>
-                        {massage.name}
-                    </h1>
+                {/* Dark overlay */}
+                <div className="absolute top-0 left-0 w-full h-full bg-black opacity-30 z-20"></div>
+
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1 }}
+                    className="relative z-50" // Ensure heading is above the overlay
+                >
+                    <h1 className="text-white text-center">{massage.name}</h1>
                 </motion.div>
             </motion.div>
 
-            {/* Background Image for Desktop View */}
+            {/* Desktop View */}
             <motion.div
                 style={{backgroundImage: `url(${massage.bigImg})`}}
                 className="h-screen bg-center bg-no-repeat bg-cover hidden md:flex items-center justify-center"
@@ -63,14 +71,23 @@ const Massage = () => {
                 animate={{opacity: 1}}
                 transition={{duration: 1}}
                 whileInView="visible"
-                viewport={{once: false}} // Keeps the animation on every scroll
+                viewport={{once: false}}
             >
-                <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1}}>
-                    <h1 className='text-white'>
+                {/* Dark overlay */}
+                <div className="absolute top-0 left-0 w-full h-full bg-black opacity-30 z-20"></div>
+
+                <motion.div
+                    initial={{opacity: 0}}
+                    animate={{opacity: 1}}
+                    transition={{duration: 1}}
+                    className="relative z-50"
+                >
+                    <h1 className='text-white text-center'>
                         {massage.name}
                     </h1>
                 </motion.div>
             </motion.div>
+
 
             {/* Massage Advantages Section */}
             <motion.h1
